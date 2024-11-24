@@ -55,7 +55,7 @@ const ChartOne = () => {
         options={options}
         series={series}
         type="area"
-        height={250}
+        height={300}
       />
     </div>
   );
