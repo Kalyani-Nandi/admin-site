@@ -1,19 +1,26 @@
-import { useEffect } from 'react';
-import useLocalStorage from './useLocalStorage';
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setTheme } from "../redux/slices/themeSlice";
 
 const useColorMode = () => {
-  const [colorMode, setColorMode] = useLocalStorage('color-theme', 'light');
+  const dispatch = useDispatch();
+  const colorMode = useSelector((state) => state.theme.mode);
 
   useEffect(() => {
-    const className = 'dark';
+    const className = "dark";
     const bodyClass = window.document.body.classList;
 
-    colorMode === 'dark'
+    colorMode === "dark"
       ? bodyClass.add(className)
       : bodyClass.remove(className);
   }, [colorMode]);
 
-  return [colorMode, setColorMode];
+  const toggleColorMode = () => {
+    const newMode = colorMode === "light" ? "dark" : "light";
+    dispatch(setTheme(newMode));
+  };
+
+  return [colorMode, toggleColorMode];
 };
 
 export default useColorMode;
