@@ -9,7 +9,7 @@ import ChartTwo from "../../components/Charts/ChartTwo";
 const HomePage = () => {
   return (
     <>
-      <div className="mt-4 flex flex-col gap-y-4">
+      <div className="my-4 flex flex-col gap-y-4">
         <div className="flex w-full gap-x-4">
           <div className="w-[55%]">
             <ChartOne />

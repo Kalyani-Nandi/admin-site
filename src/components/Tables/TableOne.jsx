@@ -6,7 +6,7 @@ import { oderHistoryData } from "../../common/data";
 
 const TableOne = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 5;
+  const itemsPerPage = 6;
 
   const startIndex = (currentPage - 1) * itemsPerPage;
   const currentOderHistoryData = oderHistoryData.slice(
