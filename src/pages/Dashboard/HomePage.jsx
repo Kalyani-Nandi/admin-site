@@ -4,6 +4,7 @@ import ChartOne from "../../components/Charts/ChartOne";
 import CardList from "../../components/CardsLists";
 import TableTwo from "../../components/Tables/TableTwo";
 import TableOne from "../../components/Tables/TableOne";
+import ChartTwo from "../../components/Charts/ChartTwo";
 
 const HomePage = () => {
   return (
@@ -33,16 +34,8 @@ const HomePage = () => {
                 />
               </div>
             </div>
-            <div className="w-full">
-              <CardDataStats
-                title="Orders"
-                total="567"
-                rate="1.1%"
-                levelDown={true}
-              />
-            </div>
+            <ChartTwo />
           </div>
-          {/* <ChartThree /> */}
         </div>
         <div className="flex gap-4 w-full">
           <div className="w-[55%]">
